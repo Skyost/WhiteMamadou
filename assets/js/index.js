@@ -3,8 +3,10 @@ var catchphrases = [
 	'Tas cru que jété un fruit ?',
 	'Ta taite de kinder surpris sponsaurisé par PES 2004'
 ];
+var catchphrase = catchphrases[Math.floor(Math.random() * catchphrases.length)];
 
-$('#catchphrase').text(catchphrases[Math.floor(Math.random() * catchphrases.length)]);
+$('#catchphrase').text(catchphrase);
+document.title = document.title + ' - ' + catchphrase;
 
 twitterFetcher.fetch({
 	'id': '616769161897877504',
