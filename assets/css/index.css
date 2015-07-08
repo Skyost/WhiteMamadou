@@ -7,6 +7,7 @@ body {
 	background-color: white;
 	padding: 1em 1em 1em 1em;
 	max-width: 50em;
+	margin-bottom: 4em;
 }
 
 .thumbnail {
@@ -43,6 +44,14 @@ body {
 #social-networks ul {
 	list-style-type: none;
 	padding: 0;
+}
+
+#memes ::selection {
+	background: #2ECC71;
+}
+
+#memes ::-moz-selection {
+	background: #2ECC71;
 }
 
 #twitter ::selection {

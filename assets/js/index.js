@@ -13,19 +13,19 @@ twitterFetcher.fetch({
 	'domId': 'twitter',
 	'maxTweets': 1,
 	'enableLinks': true,
-	'customCallback': handleTweets
+	'customCallback': showLatestTweet
 });
+
+function showLatestTweet(tweets) {
+	var wrapper = document.createElement('div');
+	wrapper.innerHTML = tweets[0];
+	document.getElementById('last-tweet').innerHTML = '<p>' + wrapper.childNodes[1].innerHTML + '</p><a href="https://twitter.com/white_mamadou" target="_blank" style="float: right;">@white_mamadou</a>';
+	centerVCard();
+}
 
 $(window).resize(function() {
 	centerVCard();
 });
-
-function handleTweets(tweets) {
-	var wrapper = document.createElement('div');
-	wrapper.innerHTML = tweets[0];
-	document.getElementById('last-tweet').innerHTML = wrapper.childNodes[1].innerHTML;
-	centerVCard();
-}
 
 function centerVCard() {
 	var vCard = $('#vcard');
@@ -33,3 +33,16 @@ function centerVCard() {
 }
 
 centerVCard();
+
+$("#gallery").nanoGallery({
+	userID: '134637764@N06',
+	kind: 'flickr',
+	photoset: 'none',
+	thumbnailHeight: 120,
+	thumbnailWidth: 120,
+	theme: 'default',
+	thumbnailLabel: {
+		display: false
+	},
+	thumbnailLazyLoad: true
+});
