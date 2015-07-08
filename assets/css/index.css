@@ -20,13 +20,37 @@ body {
 	text-align: center;
 }
 
+#title ::selection {
+	background: #FFB7B7;
+}
+
+#title ::-moz-selection {
+	background: #FFB7B7;
+}
+
 #catchphrase {
 	font-style: italic;
+}
+
+#social-networks ::selection {
+	background: #A8D1FF;
+}
+
+#social-networks ::-moz-selection {
+	background: #A8D1FF;
 }
 
 #social-networks ul {
 	list-style-type: none;
 	padding: 0;
+}
+
+#twitter ::selection {
+	background: #FFF2A8;
+}
+
+#twitter ::-moz-selection {
+	background: #FFF2A8;
 }
 
 a:link {
