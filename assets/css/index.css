@@ -1,0 +1,44 @@
+body {
+	background-image: url('../img/background.jpg');
+}
+
+#vcard {
+	border-radius: 10px;
+	background-color: white;
+	padding: 1em 1em 1em 1em;
+	max-width: 50em;
+}
+
+.thumbnail {
+	display: inline;
+	max-height: 20%;
+	max-width: 20%;
+	margin-bottom: 0;
+}
+
+#title {
+	text-align: center;
+}
+
+#catchphrase {
+	font-style: italic;
+}
+
+#social-networks ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+a:link {
+	color: #4A913C;
+}
+
+a:hover {
+	color: #438236;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #4A913C;
+}
