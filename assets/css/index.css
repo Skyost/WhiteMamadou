@@ -62,6 +62,10 @@ body {
 	background: #FFF2A8;
 }
 
+#last-tweet {
+	padding-bottom: 2.5em;
+}
+
 a:link {
 	color: #4A913C;
 }

@@ -40,7 +40,7 @@ $("#gallery").nanoGallery({
 	photoset: 'none',
 	thumbnailHeight: 120,
 	thumbnailWidth: 120,
-	theme: 'default',
+	theme: 'light',
 	thumbnailLabel: {
 		display: false
 	},
