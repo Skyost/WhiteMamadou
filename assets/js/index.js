@@ -1,7 +1,7 @@
 var catchphrases = [
 	'Wesh nike ta mer',
 	'Tas cru que jété un fruit ?',
-	'Ta taite de kinder surpris sponsaurisé par PES 2004'
+	'Ta taite de kinder surprise sponsaurisé par PES 2004'
 ];
 var catchphrase = catchphrases[Math.floor(Math.random() * catchphrases.length)];
 
