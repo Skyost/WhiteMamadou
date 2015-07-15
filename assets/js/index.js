@@ -22,10 +22,10 @@ function showLatestTweet(tweets) {
 	var wrapper = document.createElement('div');
 	wrapper.innerHTML = tweets[0];
 	document.getElementById('last-tweet').innerHTML = '<p>' + wrapper.childNodes[1].innerHTML + '</p><a href="https://twitter.com/white_mamadou" target="_blank" style="float: right;">@white_mamadou</a>';
-	centerVCard();
+	//centerVCard();
 }
 
-$(window).resize(function() {
+/*$(window).resize(function() {
 	centerVCard();
 });
 
@@ -34,7 +34,7 @@ function centerVCard() {
 	vCard.css('margin-top', ($(document).height() / 2) - (vCard.height() / 2));
 }
 
-centerVCard();
+centerVCard();*/
 
 $("#gallery").nanoGallery({
 	userID: '134637764@N06',

@@ -1,5 +1,6 @@
 body {
 	background-image: url('../img/background.jpg');
+	padding: 0em 2em 0em 2em;
 }
 
 #vcard {
@@ -7,7 +8,8 @@ body {
 	background-color: white;
 	padding: 1em 1em 1em 1em;
 	max-width: 50em;
-	margin-bottom: 4em;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 .thumbnail {
