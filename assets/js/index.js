@@ -3,7 +3,9 @@ var catchphrases = [
 	'Tas cru que jété un fruit ?',
 	'Ta taite de kinder surprise sponsaurisé par PES 2004',
 	'Oktamer Batayé',
-	'Salu bende de fisse de vaux maires'
+	'Salu bende de fisse de vaux maires',
+	'Wesh fasse de ra',
+	'Oui moa ossi je t\'ème bi1'
 ];
 var catchphrase = catchphrases[Math.floor(Math.random() * catchphrases.length)];
 
@@ -15,26 +17,18 @@ twitterFetcher.fetch({
 	'domId': 'twitter',
 	'maxTweets': 1,
 	'enableLinks': true,
+	'showImages': false,
 	'customCallback': showLatestTweet
 });
 
 function showLatestTweet(tweets) {
 	var wrapper = document.createElement('div');
 	wrapper.innerHTML = tweets[0];
+	$('img', wrapper).each(function() {
+		$(this).replaceWith($(this).attr('alt'));
+	});
 	document.getElementById('last-tweet').innerHTML = '<p>' + wrapper.childNodes[1].innerHTML + '</p><a href="https://twitter.com/white_mamadou" target="_blank" style="float: right;">@white_mamadou</a>';
-	//centerVCard();
 }
-
-/*$(window).resize(function() {
-	centerVCard();
-});
-
-function centerVCard() {
-	var vCard = $('#vcard');
-	vCard.css('margin-top', ($(document).height() / 2) - (vCard.height() / 2));
-}
-
-centerVCard();*/
 
 $("#gallery").nanoGallery({
 	userID: '134637764@N06',
