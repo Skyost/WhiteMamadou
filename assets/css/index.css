@@ -1,3 +1,24 @@
+@keyframes segpa-animation {
+	0% {
+		background-color: #c0392b;
+	}
+	20% {
+		background-color: #f1c40f;
+	}
+	40% {
+		background-color: #27ae60;
+	}
+	60% {
+		background-color: #2980b9;
+	}
+	80% {
+		background-color: #8e44ad;
+	}
+	100% {
+		background-color: #c0392b;
+	}
+}
+
 body {
 	background-image: url('../img/background.jpg');
 	padding: 0em 2em 0em 2em;
@@ -13,10 +34,10 @@ body {
 }
 
 .thumbnail {
-	display: inline;
-	max-height: 20%;
-	max-width: 20%;
+	max-height: 25%;
+	max-width: 25%;
 	margin-bottom: 0;
+	cursor: pointer;
 }
 
 #title {
@@ -68,8 +89,34 @@ body {
 	padding-bottom: 2.5em;
 }
 
+#segpa-song {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	animation-name: segpa-animation;
+	-webkit-animation-name: segpa-animation;
+	animation-duration: 5s;
+	-webkit-animation-duration: 5s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+#segpa-song img {
+	opacity: 0.7;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#player {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
 a:link {
 	color: #4A913C;
+	text-decoration: none;
 }
 
 a:hover {
@@ -80,4 +127,5 @@ a:hover {
 
 a:visited {
 	color: #4A913C;
+	text-decoration: none;
 }

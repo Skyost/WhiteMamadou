@@ -1,3 +1,19 @@
+var segpaSong = false;
+var player;
+
+$("#gallery").nanoGallery({
+	userID: '134637764@N06',
+	kind: 'flickr',
+	photoset: 'none',
+	thumbnailHeight: 120,
+	thumbnailWidth: 120,
+	theme: 'light',
+	thumbnailLabel: {
+		display: false
+	},
+	thumbnailLazyLoad: true
+});
+
 var catchphrases = [
 	'Wesh nike ta mer',
 	'Tas cru que jété un fruit ?',
@@ -30,15 +46,33 @@ function showLatestTweet(tweets) {
 	document.getElementById('last-tweet').innerHTML = '<p>' + wrapper.childNodes[1].innerHTML + '</p><a href="https://twitter.com/white_mamadou" target="_blank" style="float: right;">@white_mamadou</a>';
 }
 
-$("#gallery").nanoGallery({
-	userID: '134637764@N06',
-	kind: 'flickr',
-	photoset: 'none',
-	thumbnailHeight: 120,
-	thumbnailWidth: 120,
-	theme: 'light',
-	thumbnailLabel: {
-		display: false
-	},
-	thumbnailLazyLoad: true
+$('.thumbnail').click(function() {
+	if(segpaSong) {
+		$('body').css('padding', '');
+		if(typeof player !== 'undefined') {
+			player.pauseVideo();
+			player.seekTo(0, true);
+		}
+	}
+	else {
+		$('body').css('padding', '0em');
+		if(typeof player !== 'undefined') {
+			player.playVideo();
+		}
+	}
+	$('#vcard').toggleClass('hidden');
+	$('#segpa-song').toggleClass('hidden');
+	segpaSong = !segpaSong;
 });
+
+function onYouTubePlayerAPIReady() {
+	new YT.Player('player', {
+		videoId: 'ugMS6DdDw1A',
+		loop: true,
+		events: {
+			onReady: function(event) {
+				player = event.target;
+			}
+		}
+	});
+}
