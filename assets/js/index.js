@@ -48,6 +48,7 @@ function showLatestTweet(tweets) {
 
 $('.thumbnail').click(function() {
 	if(segpaSong) {
+		fadeImage();
 		$('body').css('padding', '');
 		if(typeof player !== 'undefined') {
 			player.pauseVideo();
@@ -65,13 +66,19 @@ $('.thumbnail').click(function() {
 	segpaSong = !segpaSong;
 });
 
+function fadeImage() {
+	$('#segpa-song img').fadeTo('slow' , 0.1, function() {
+		$('#segpa-song img').fadeTo('slow' , 0.9, fadeImage());
+	});
+}
+
 function onYouTubePlayerAPIReady() {
 	new YT.Player('player', {
 		videoId: '-HuGevIeSow',
-		loop: true,
 		events: {
 			onReady: function(event) {
 				player = event.target;
+				player.setLoop(true);
 				if(segpaSong) {
 					player.playVideo();
 				}

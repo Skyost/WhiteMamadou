@@ -38,6 +38,7 @@ body {
 	max-width: 25%;
 	margin-bottom: 0;
 	cursor: pointer;
+	pointer-events: none;
 }
 
 #title {
@@ -102,7 +103,7 @@ body {
 }
 
 #segpa-song img {
-	opacity: 0.7;
+	/*opacity: 0.7;*/
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
