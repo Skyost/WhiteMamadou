@@ -67,11 +67,14 @@ $('.thumbnail').click(function() {
 
 function onYouTubePlayerAPIReady() {
 	new YT.Player('player', {
-		videoId: 'ugMS6DdDw1A',
+		videoId: '-eODYb27YR4',
 		loop: true,
 		events: {
 			onReady: function(event) {
 				player = event.target;
+				if(segpaSong) {
+					player.playVideo();
+				}
 			}
 		}
 	});
