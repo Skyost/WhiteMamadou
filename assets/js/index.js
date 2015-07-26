@@ -48,7 +48,6 @@ function showLatestTweet(tweets) {
 
 $('.thumbnail').click(function() {
 	if(segpaSong) {
-		fadeImage();
 		$('body').css('padding', '');
 		if(typeof player !== 'undefined') {
 			player.pauseVideo();
@@ -66,15 +65,17 @@ $('.thumbnail').click(function() {
 	segpaSong = !segpaSong;
 });
 
+fadeImage();
+
+$('.thumbnail').on('dragstart', function(event) {
+	event.preventDefault();
+});
+
 function fadeImage() {
 	$('#segpa-song img').fadeTo('slow' , 0.1, function() {
 		$('#segpa-song img').fadeTo('slow' , 0.9, fadeImage());
 	});
 }
-
-$('.thumbnail').on('dragstart', function(event) {
-	event.preventDefault();
-});
 
 function onYouTubePlayerAPIReady() {
 	new YT.Player('player', {
