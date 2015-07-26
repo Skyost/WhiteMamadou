@@ -26,6 +26,7 @@ body {
 
 #vcard {
 	border-radius: 10px;
+	box-shadow: 10px 10px 5px #999999;
 	background-color: white;
 	padding: 1em 1em 1em 1em;
 	max-width: 50em;
@@ -42,6 +43,10 @@ body {
 
 #title {
 	text-align: center;
+}
+
+#title h1 {
+	text-shadow: 0 0 10px #999999;
 }
 
 #title ::selection {
