@@ -114,6 +114,21 @@ body {
 	left: 0.25em;
 	text-transform: uppercase;
 	font-weight: bold;
+	font-size: 10.5px;
+}
+
+#about:link {
+	color: #333333;
+}
+
+#about:hover {
+	color: #333333;
+	text-decoration: none;
+}
+
+#about:visited {
+	color: #333333;
+	text-decoration: none;
 }
 
 #player {
