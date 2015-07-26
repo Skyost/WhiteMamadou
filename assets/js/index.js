@@ -72,6 +72,10 @@ function fadeImage() {
 	});
 }
 
+$('.thumbnail').on('dragstart', function(event) {
+	event.preventDefault();
+});
+
 function onYouTubePlayerAPIReady() {
 	new YT.Player('player', {
 		videoId: '-HuGevIeSow',
