@@ -84,8 +84,18 @@ function onYouTubePlayerAPIReady() {
 			onReady: function(event) {
 				player = event.target;
 				player.setLoop(true);
-				if(segpaSong) {
-					player.playVideo();
+				player.playVideo();
+				if(!segpaSong) {
+					player.pauseVideo();
+					player.seekTo(0, true);
+				}
+			},
+			onStateChange: function(event) {
+				if(event.data == YT.PlayerState.ENDED) {
+					player.seekTo(0, true);
+					if(segpaSong) {
+						player.playVideo();
+					}
 				}
 			}
 		}
