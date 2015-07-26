@@ -67,7 +67,7 @@ $('.thumbnail').click(function() {
 
 function onYouTubePlayerAPIReady() {
 	new YT.Player('player', {
-		videoId: '-eODYb27YR4',
+		videoId: '-HuGevIeSow',
 		loop: true,
 		events: {
 			onReady: function(event) {
