@@ -76,9 +76,20 @@
 				<br>
 				<textarea class="form-control text" rows="3" cols="50">Wesh les fils de vos mères.</textarea>
 			</div>
-			<div id="buttons">
-				<button id="play" class="btn btn-primary"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Jouer</button>
-				<button id="download" class="btn btn-success"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> Télécharger</button>
+			<div id="buttons" class="row">
+				<div class="col-md-4">
+					<button id="play" class="btn btn-primary"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Jouer</button>
+				</div>
+				<div class="col-md-4">
+					<button id="download" class="btn btn-success"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> Télécharger</button>
+				</div>
+				<div class="col-md-4">
+					<button id="getlink" class="btn btn-default"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> Obtenir le lien</button>
+					<div class="input-group hidden">
+						<div class="input-group-addon"><span class="glyphicon glyphicon-copy" aria-hidden="true" title="Copier le lien"></span></div>
+						<input type="text" class="form-control"/>
+					</div>
+				</div>
 			</div>
 		</div>
 		<footer>

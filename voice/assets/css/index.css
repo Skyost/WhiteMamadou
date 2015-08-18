@@ -13,7 +13,11 @@ body {
 
 #buttons button {
 	margin-top: 0.2em;
-	width: 20em;
+	width: 100%;
+}
+
+.glyphicon-copy {
+	cursor: pointer;
 }
 
 footer {

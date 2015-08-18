@@ -64,4 +64,12 @@ $(document).ready(function() {
 		playBtn.removeClass('disabled');
 		downloadBtn.removeClass('disabled');
 	});
+	$('#getlink').click(function() {
+		$('.input-group input').val(getSoundUrl($('.text').val(), $('#voices').find(':selected').text()));
+		$('.input-group').removeClass('hidden');
+	});
+	$('.glyphicon-copy').click(function() {
+		$('.input-group input').select();
+		document.execCommand('copy');
+	});
 });
