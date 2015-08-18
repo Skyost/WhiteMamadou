@@ -68,7 +68,7 @@ $(document).ready(function() {
 		$('.input-group input').val(getSoundUrl($('.text').val(), $('#voices').find(':selected').text()));
 		$('.input-group').removeClass('hidden');
 	});
-	$('.glyphicon-copy').click(function() {
+	$('.input-group-addon').click(function() {
 		$('.input-group input').select();
 		document.execCommand('copy');
 	});
